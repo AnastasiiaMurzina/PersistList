@@ -23,11 +23,8 @@ public class FatNodeList {
             return fatNode1;
         } // if fatNode.getNext() = null
         int n = 1;
-        if (fatNode.name.substring(0, 4) == "tail") {
-            n += Integer.valueOf(fatNode.name.substring(4));
-        }
         Node node1 = new Node();
-        FatNode fatNode2 = new FatNode(fatNode.getNext().name + n, node);
+        FatNode fatNode2 = new FatNode(fatNode.name + n, node);
         node1.setPrevious(fatNode1);
         node1.setNext(fatNode.getNext());
         node.setNext(fatNode2);
@@ -53,11 +50,8 @@ public class FatNodeList {
             return fatNode1;
         } // if fatNode.getNext() = null
         int n = 1;
-        if (fatNode.name.substring(0, 4) == "head") {
-            n += Integer.valueOf(fatNode.name.substring(4));
-        }
         Node node1 = new Node();
-        FatNode fatNode2 = new FatNode(fatNode.getPrevious().name + n, node);
+        FatNode fatNode2 = new FatNode(fatNode.name + n, node);
         node1.setNext(fatNode1);
         node1.setPrevious(fatNode.getPrevious());
         node.setPrevious(fatNode2);
