@@ -1,5 +1,3 @@
-package com.company;
-
 public class FatNodeList {
     private FatNode head;
     private FatNode tail;
@@ -63,7 +61,6 @@ public class FatNodeList {
         FatNode fatNode = new FatNode(name, node);
         node.setVersion(currentVersion);
             if (pushAfterThis.getNext().isRealFat()) {
-                //here to write
                 makeThisExtraToTail(pushAfterThis.getNext(), fatNode);
             } else {
                 Node node1 = new Node();
@@ -73,7 +70,6 @@ public class FatNodeList {
                 pushAfterThis.getNext().setSecondNode(node1);
             }
             if (pushAfterThis.isRealFat()){
-                //here to write
                 makeThisExtraToHead(pushAfterThis, fatNode);
             } else {
                 Node node2 = new Node();
